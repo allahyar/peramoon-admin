@@ -1,0 +1,36 @@
+.breadcrumb {
+   margin-bottom: 1rem;
+   li {
+      display: inline-flex;
+      align-items: center;
+      font-size: 13px;
+      padding-right: 18px;
+      position: relative;
+
+      a {
+         color: #a5a6a7;
+
+         i {
+            margin: 0 5px;
+         }
+      }
+
+      &:after {
+         content: "\e9bb";
+         position: absolute;
+         font: 12px 'icomoon';
+         right: 3px;
+      }
+
+      &.active {
+         color: #78797a;
+         font-weight: 500;
+      }
+
+      &:last-child {
+         &:after {
+            content: none;
+         }
+      }
+   }
+}

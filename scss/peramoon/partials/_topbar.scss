@@ -1,0 +1,154 @@
+.page-topbar {
+   margin: 12px 0;
+   height: $page-topbar-height;
+   display: flex;
+   justify-content: space-between;
+
+   .navbar-brand {
+      display: flex;
+      align-items: center;
+   }
+
+   .navbar-direction {
+      display: flex;
+      align-items: center;
+
+      i {
+         font-size: 28px;
+         margin: 0 15px;
+         cursor: pointer;
+         transition: color 200ms;
+
+         &:hover {
+            color: #000000;
+         }
+      }
+
+      h1 {
+         display: block;
+         margin: 0;
+         font-size: 18px;
+         font-weight: 500;
+      }
+   }
+
+   .navbar-info {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+
+      .user-info {
+         background-color: #dbdbdb;
+         border-radius: 50px 0 0 50px;
+         height: $page-topbar-height;
+         display: flex;
+         padding: 8px 40px 8px 8px;
+         position: relative;
+         cursor: pointer;
+         margin-left: 10px;
+
+         .avatar {
+            width: 45px;
+            height: 45px;
+
+            img {
+               width: 100%;
+               height: 100%;
+               border-radius: 50%;
+            }
+         }
+
+         .inner {
+            margin: 0 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            strong {
+               font-size: 14px;
+            }
+
+            small {
+               font-size: 10px;
+            }
+         }
+
+         & > i {
+            position: absolute;
+            top: 50%;
+            margin-top: -8px;
+            right: 10px;
+            width: 12px;
+            height: 15px;
+            font-size: 17px;
+         }
+      }
+
+      i {
+         cursor: pointer;
+         font-size: 22px;
+         margin: 0 10px;
+      }
+   }
+}
+
+.navbar-toggler-icon {
+   width: 67px;
+   cursor: pointer;
+   height: 66px;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: $secondary-color;
+   z-index: 1000;
+   background: transparent url("../../assets/images/ic-navbar-toggle.png") no-repeat center;
+}
+
+
+@include rtl {
+   .navbar-toggler-icon {
+      background-image: url("../../assets/images/ic-navbar-toggle-rtl.png");
+   }
+   .icon-arrow-left {
+      transform: rotate(-180deg);
+   }
+   .user-info {
+      padding: 8px 8px 8px 40px !important;
+      border-radius: 0 50px 50px 0 !important;
+   }
+}
+
+@include media-breakpoint-down(md) {
+   .page-topbar {
+      height: 40px;
+
+      .navbar-direction h1, .navbar-info .user-info .inner, .icon-maximize, .icon-globe {
+         display: none;
+      }
+
+      .navbar-direction i {
+         margin: 0 5px;
+      }
+
+      .navbar-info {
+         i {
+            font-size: 26px;
+         }
+
+         .user-info {
+            background-color: transparent;
+            padding: 14px 30px 14px 8px;
+
+            .avatar {
+               width: 35px;
+               height: 35px;
+            }
+
+            i {
+               right: 5px;
+            }
+         }
+      }
+   }
+}

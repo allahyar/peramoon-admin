@@ -1,0 +1,26 @@
+ul {
+   padding: 0;
+   margin-bottom: 0;
+
+   li {
+      list-style: none;
+   }
+}
+
+select, input, textarea {
+   &:focus {
+      outline: none;
+   }
+}
+
+a {
+   color: $text-gray;
+
+   &:hover {
+      text-decoration: none;
+   }
+}
+
+form {
+   margin-bottom: 0;
+}

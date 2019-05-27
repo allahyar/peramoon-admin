@@ -1,0 +1,93 @@
+extends _layout
+
+
+block title
+    title Article Title
+
+block content
+    .card
+        ul.tabs
+            li.tab-title
+                i.icon-archive
+                | Products
+            li.tab-item.active
+                a(href='') Create
+            li.tab-item
+                a(href='') Product List
+            li.tab-item.dropdown
+                a.more.dropdown-toggle(href='')
+                    i.icon-more-vertical
+                .dropdown-menu
+                    a.dropdown-item(href="") Tab Item 1
+                    a.dropdown-item(href="") Tab Item 2
+                    a.dropdown-item(href="") Tab Item 3
+        .tab-content
+            form
+                .form-row
+                    .col-xl-5
+                        fieldset
+                            legend Personalia
+                            .form-row
+                                .col-xl-4
+                                    .form-group
+                                        label Name
+                                        input.form-control(type="text")
+                                .col-xl-4
+                                    .form-group
+                                        label Name
+                                        input.form-control(type="text")
+                                .col-xl-4
+                                    .form-group
+                                        label Name
+                                        input.form-control(type="text")
+                                .col-xl-4
+                                    .form-group
+                                        label Name
+                                        input.form-control(type="text")
+                                .col-xl-4
+                                    .form-group
+                                        label Name
+                                        input.form-control(type="text")
+                                .col-xl-4
+                                    .form-group
+                                        label Name
+                                        input.form-control(type="text")
+
+                    .col-7
+                        fieldset
+                            legend Personalia
+                            .form-row
+                                .col-xl-4
+                                    .form-group
+                                        label Name
+                                        input.form-control(type="text")
+                                .col-xl-4
+                                    .form-group.is-invalid
+                                        label Name
+                                        select.form-control
+                                            option Select Chose ...
+                                        small این فیلد خالی است
+                                .col-xl-4
+                                    .form-group.is-valid
+                                        label Name
+                                        input.form-control(type="text")
+                                .col-xl-4
+                                    .form-group
+                                        label Name
+                                        input.form-control(type="text")
+                                .col-xl-4
+                                    .form-group
+                                        label Name
+                                        input.form-control(type="text")
+                                .col-xl-4
+                                    .form-group
+                                        label Name
+                                        input.form-control(type="text")
+                .form-buttons
+                    button.btn.btn-primary.has-icon(type='submit')
+                        i.icon-save
+                        | Save
+                    button.btn.btn-light.has-icon(type='submit')
+                        i.icon-x
+                        | Cansel
+

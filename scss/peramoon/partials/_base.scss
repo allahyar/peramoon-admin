@@ -1,0 +1,48 @@
+.page-wrapper {
+   background-color: #eaeaea;
+   min-height: 100%;
+
+   &.full {
+      .main-content {
+         padding-left: 0;
+      }
+      .sidebar-menu {
+         left: -$sidebar-width;
+      }
+   }
+
+}
+
+.main-content {
+   padding-left: $sidebar-width;
+   -webkit-transition: .3s ease all;
+   -moz-transition: .3s ease all;
+   -o-transition: .3s ease all;
+   transition: .3s ease all;
+   -webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+   backface-visibility: hidden;
+   overflow: hidden;
+
+   & > .container {
+      max-width: inherit;
+   }
+}
+
+
+@include rtl {
+   .page-wrapper.full .main-content {
+      padding-left: 0;
+      padding-right: $sidebar-width-collapsed;
+   }
+   .main-content {
+      padding-right: $sidebar-width;
+      padding-left: 0;
+   }
+}
+
+@include media-breakpoint-down(md){
+   .main-content {
+      padding-left: 0;
+   }
+}
