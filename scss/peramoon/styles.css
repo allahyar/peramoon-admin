@@ -39,7 +39,17 @@ html[dir='rtl'] .main-content {
 
 @media (max-width: 991.98px) {
   .main-content {
-    padding-left: 0; } }
+    padding-left: 0; }
+
+  .page-wrapper.collapse-sidebar:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998; } }
 .page-topbar {
   margin: 12px 0;
   height: 62px;
@@ -114,7 +124,6 @@ html[dir='rtl'] .main-content {
   align-items: center;
   justify-content: center;
   color: #c22828;
-  z-index: 1000;
   background: transparent url("../../assets/images/ic-navbar-toggle.png") no-repeat center; }
 
 html[dir='rtl'] .navbar-toggler-icon {
@@ -248,7 +257,10 @@ ul.sidenav {
 
 @media (max-width: 991.98px) {
   .sidebar-menu {
-    left: -280px; } }
+    left: -280px; }
+
+  .collapse-sidebar .sidebar-menu {
+    left: 0 !important; } }
 html[dir='rtl'] .search-holder i {
   left: 9px; }
 html[dir='rtl'] ul.sidenav i {

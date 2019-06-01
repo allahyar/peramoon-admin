@@ -158,6 +158,9 @@ ul.sidenav {
    .sidebar-menu{
       left: -$sidebar-width;
    }
+   .collapse-sidebar .sidebar-menu {
+       left: 0!important;
+   }
 }
 
 @include rtl {
